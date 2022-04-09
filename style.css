@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  font-family: 'MuseoModerno'
+}
+#root{
+  display: flex;
+  height: 100%;
+  min-height: 470px;
+  background-color: #000117;
+  color : #b80e66;
+  text-shadow:
+		0 0 5px  rgb(184,14,102),
+		0 0 10px  rgb(184,14,102),
+		0 0 20px  rgb(184,14,102),
+		0 0 30px  rgba(222,195,229,0.2),
+		0 0 70px  rgba(222,195,229,0.2),
+		0 0 80px  rgba(222,195,229,0.2);
+}
+
+#clock{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /*height: 90%;*/
+  margin: auto;
+}
+.control-area{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.control{
+  text-align: center;
+  width: 50%;
+  padding-bottom: 25px;
+}
+h2{
+  font-weight: 600;
+  
+}
+.control-button{
+  margin: 5px;
+  width: 35px;
+  padding: 3px;
+  color:  #b80e66;
+  background: none;
+  border: none;
+  transition: 0.5s;
+  text-shadow:
+		0 0 5px  rgb(184,14,102),
+		0 0 10px  rgb(184,14,102),
+		0 0 20px  rgb(184,14,102),
+		0 0 30px  rgba(222,195,229,0.2),
+		0 0 70px  rgba(222,195,229,0.2),
+		0 0 80px  rgba(222,195,229,0.2);
+}
+.control-button:hover{
+  color:#1691b2;
+  transform: scale(1.2);
+  text-shadow:
+		0 0 5px  rgb(22,145,178),
+		0 0 10px rgb(22,145,178),
+		0 0 20px  rgb(22,145,178),
+		0 0 30px  rgba(60,71,229,0.2),
+		0 0 70px  rgba(60,71,229,0.2),
+		0 0 80px  rgba(60,71,229,0.2);
+  cursor: pointer;
+}
+#timer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.timer-session-area{
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+#time-left{
+  font-size: 3rem;
+  font-weight: 100;
+}
+.timer-control-area{
+  text-align:center;
+  margin-top: 20px;
+}
+#start_stop, #reset{
+  transform: scale(2);
+  padding: 0;
+  margin: 20px;
+}
+/*#start_stop{
+  background-color: blue;
+}
+#reset{
+  background-color: red;
+}*/
+#credits{
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px  rgb(255,255,255),
+		         0 0 10px rgb(255,255,255),
+		         0 0 20px  rgb(255,255,255),
+		         0 0 30px  rgba(38,74,51,0.2),
+		         0 0 70px  rgba(38,74,51,0.2),
+		         0 0 80px  rgba(38,74,51,0.2);
+}
+#credits a{
+  color:  #b80e66;
+  text-shadow:
+		0 0 5px  rgb(184,14,102),
+		0 0 10px  rgb(184,14,102),
+		0 0 20px  rgb(184,14,102),
+		0 0 30px  rgba(222,195,229,0.2),
+		0 0 70px  rgba(222,195,229,0.2),
+		0 0 80px  rgba(222,195,229,0.2);
+}
+.paused{
+   border-color: rgb(255,0,0);
+   box-shadow:0 0 5px  rgb(255,0,0),
+		         0 0 10px rgb(255,0,0),
+		         0 0 20px  rgb(255,0,0),
+		         0 0 30px  rgba(38,74,51,0.2),
+		         0 0 70px  rgba(38,74,51,0.2),
+		         0 0 80px  rgba(38,74,51,0.2);
+  color: rgb(255,0,0);
+  text-shadow: 0 0 5px  rgb(255,0,0),
+		         0 0 10px rgb(255,0,0),
+		         0 0 20px  rgb(255,0,0),
+		         0 0 30px  rgba(38,74,51,0.2),
+		         0 0 70px  rgba(38,74,51,0.2),
+		         0 0 80px  rgba(38,74,51,0.2);
+}
+
+.active{
+  border-color: #1691b2;
+  box-shadow:0 0 5px  rgb(22,145,178),
+		         0 0 10px rgb(22,145,178),
+		         0 0 20px  rgb(22,145,178),
+		         0 0 30px  rgba(60,71,229,0.2),
+		         0 0 70px  rgba(60,71,229,0.2),
+		         0 0 80px  rgba(60,71,229,0.2);
+  color: #1691b2;
+  text-shadow: 0 0 5px  rgb(22,145,178),
+		           0 0 10px rgb(22,145,178),
+		           0 0 20px  rgb(22,145,178),
+		           0 0 30px  rgba(60,71,229,0.2),
+		           0 0 70px  rgba(60,71,229,0.2),
+		           0 0 80px  rgba(60,71,229,0.2);
+}
+.break-time{
+  border-color: white;
+  box-shadow:0 0 5px  rgb(255,255,255),
+		         0 0 10px rgb(255,255,255),
+		         0 0 20px  rgb(255,255,255),
+		         0 0 30px  rgba(38,74,51,0.2),
+		         0 0 70px  rgba(38,74,51,0.2),
+		         0 0 80px  rgba(38,74,51,0.2);
+  color: white;
+  text-shadow: 0 0 5px  rgb(255,255,255),
+		         0 0 10px rgb(255,255,255),
+		         0 0 20px  rgb(255,255,255),
+		         0 0 30px  rgba(38,74,51,0.2),
+		         0 0 70px  rgba(38,74,51,0.2),
+		         0 0 80px  rgba(38,74,51,0.2);
+}
