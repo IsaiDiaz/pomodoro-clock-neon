@@ -181,7 +181,7 @@ class Clock extends React.Component {
       React.createElement("div", { id: "timer" }, /*#__PURE__*/
       React.createElement("div", { className: "timer-session-area paused" }, /*#__PURE__*/
       React.createElement("h2", { id: "timer-label" }, this.state.timerLabel), /*#__PURE__*/
-      React.createElement("p", { id: "time-left" }, min, ":", seg)), /*#__PURE__*/
+      React.createElement("p", { id: "time-left", translate: "no"}, min, ":", seg)), /*#__PURE__*/
 
       React.createElement("div", { className: "timer-control-area" }, /*#__PURE__*/
       React.createElement("button", { id: "start_stop", className: "control-button", title: "play/pause", onClick: this.changeTimerState }, /*#__PURE__*/
